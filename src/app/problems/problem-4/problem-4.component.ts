@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'rp-problem-four',
@@ -11,11 +11,11 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
     <p>O texto acima era para ser: O henrique é um desenvolvedor de apps e api.</p>
   `,
 })
-export class Problem4Component implements OnInit {
+export class Problem4Component implements AfterViewInit {
   @ViewChild('textToChange')
   public textToChange!: ElementRef<HTMLSpanElement>;
 
-  public async ngOnInit(): Promise<void> {
+  public async ngAfterViewInit(): Promise<void> {
     this.textToChange.nativeElement.innerText = 'desenvolvedor de apps e api';
   }
 }
