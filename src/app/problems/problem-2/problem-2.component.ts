@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Problem2Enum } from './problem-2.enum';
 
 @Component({
   selector: 'rp-problem-two',
@@ -10,21 +11,22 @@ import { Component } from '@angular/core';
     <label>Você selecionou a comida: {{ selectedFood }}</label>
     <ul>
       <li>
-        <button (click)="changeFoodTo('none')">Trocar para: nenhuma</button>
+        <button (click)="changeFoodTo(foodType.NONE)">Trocar para: nenhuma</button>
       </li>
       <li>
-        <button (click)="changeFoodTo('batata')">Trocar para: batata</button>
+        <button (click)="changeFoodTo(foodType.POTATO)">Trocar para: batata</button>
       </li>
       <li>
-        <button (click)="changeFoodTo('frango')">Trocar para: frango</button>
+        <button (click)="changeFoodTo(foodType.CHICKEN)">Trocar para: frango</button>
       </li>
     </ul>
   `,
 })
 export class Problem2Component {
-  public selectedFood: string = 'none';
+  public foodType: typeof Problem2Enum = Problem2Enum;
+  public selectedFood: Problem2Enum = Problem2Enum.NONE;
 
-  public changeFoodTo(food: string): void {
+  public changeFoodTo(food: Problem2Enum): void {
     this.selectedFood = food;
   }
 }
