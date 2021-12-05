@@ -14,6 +14,9 @@ import { Component } from '@angular/core';
       <li>
         <a routerLink="/problems/3">Problema 3: Usando ViewChild</a>
       </li>
+      <li>
+        <a routerLink="/problems/4">Problema 4: Entendendo melhor sobre View Child e LifeCycle Methods</a>
+      </li>
     </ul>
   `,
 })
