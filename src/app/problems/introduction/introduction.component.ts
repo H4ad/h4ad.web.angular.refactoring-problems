@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
       <li>
         <a routerLink="/problems/1">Problema 1: Usando Pipes</a>
       </li>
+      <li>
+        <a routerLink="/problems/2">Problema 2: Usando Enums no HTML</a>
+      </li>
     </ul>
   `,
 })
-export class ProblemsComponent {}
+export class IntroductionComponent {}
