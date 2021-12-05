@@ -11,6 +11,9 @@ import { Component } from '@angular/core';
       <li>
         <a routerLink="/problems/2">Problema 2: Usando Enums no HTML</a>
       </li>
+      <li>
+        <a routerLink="/problems/3">Problema 3: Usando ViewChild</a>
+      </li>
     </ul>
   `,
 })
